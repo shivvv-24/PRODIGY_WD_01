@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Landing Page</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            font-size: 16px;
+            line-height: 1.6;
+        }
+
+        nav {
+            position: fixed;
+            width: 100%;
+            background: #333;
+            padding: 15px 0;
+            transition: background 0.3s;
+            top: 0;
+            left: 0;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            padding: 10px 15px;
+            transition: 0.3s;
+        }
+
+        nav ul li a:hover {
+            background: #ff6600;
+            color: white;
+            border-radius: 5px;
+        }
+
+        /* Change Navbar Background on Scroll */
+        .scrolled {
+            background: #222;
+        }
+
+        /* Page Content */
+        header {
+            text-align: center;
+            padding: 100px 20px;
+            background: #007bff;
+            color: white;
+        }
+
+        section {
+            padding: 50px 20px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav id="navbar">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+
+    <header>
+        <h1>Welcome to My Landing Page</h1>
+        <p>This is a responsive landing page with an interactive navbar.</p>
+    </header>
+
+    <section>
+        <h2>About Us</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    </section>
+
+    <script src="script.js">
+        window.addEventListener('scroll', function () {
+            let navbar = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+    </script>
+
+</body>
+
+</html>
